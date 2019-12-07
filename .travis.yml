@@ -1,0 +1,9 @@
+language: haskell
+ghc:
+  - "8.6.4"
+
+install: skip
+script:
+  - for d in Day*; 
+    do (cd "$d" && runhaskell "${d}.hs");
+    done
