@@ -10,7 +10,7 @@ script:
       echo "Running ${d}";
       runhaskell "${d}.hs";
       if [ -f Test.hs ]; then
-        runhaskell Test.hs
+        runhaskell Test.hs;
       fi;
       cd ..;
     done
