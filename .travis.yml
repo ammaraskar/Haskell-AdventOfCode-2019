@@ -3,14 +3,10 @@ language: haskell
 notifications:
   email: false
 
-install: skip
+install: 
+  - cabal install hspec
+  - cabal install text
+
 script:
-  - for d in Day*; do
-      cd "$d";
-      echo "Running ${d}";
-      runhaskell "${d}.hs";
-      if [ -f Test.hs ]; then
-        runhaskell Test.hs;
-      fi;
-      cd ..;
-    done
+  - (cd Day1 && runhaskell Day1.hs)
+  - (cd Day2 && runhaskell Test.hs && runhaskell Day2.hs)
