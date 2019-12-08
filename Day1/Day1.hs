@@ -1,5 +1,3 @@
-module Day1 where
-
 type Mass = Integer
 
 -- Calculate the amount of fuel (in terms of mass) to carry a certain amount
